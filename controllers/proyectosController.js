@@ -48,7 +48,6 @@ exports.nuevoProyecto = async (req, res) => {
       
        await Proyectos.create({ nombre });
        res.redirect('/');
-        
       
    }
 }
