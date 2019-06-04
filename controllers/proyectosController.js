@@ -66,7 +66,7 @@ exports.proyectoPorUrl = async (req, res, next) => {
     const proyectoPromise =  Proyectos.findOne({
         where: {
             url: req.params.url,
-            usuarioId
+            usuarioId: usuarioId
         }
     });
 
