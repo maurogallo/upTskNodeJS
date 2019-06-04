@@ -1,6 +1,6 @@
 const express = require('express');
-const routes  = require('./routes');
-const path =require('path');
+const routes = require('./routes');
+const path = require('path');
 const bodyParser = require('body-parser');
 const expressValidator = require('express-validator');
 const flash = require('connect-flash');
@@ -39,7 +39,9 @@ app.use(express.static('public'));
 app.set('view engine', 'pug');
 
 // habilitar bodyParser para leer datos del formulario
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 
 // Agregamos express validator a toda la aplicacion
 app.use(expressValidator());
@@ -68,14 +70,17 @@ app.use(passport.session());
 app.use(flash());
 
 //Pasar van dump a la aplicacion
-app.use((req,res, next) => {
+app.use((req, res, next) => {
     res.locals.vardump = helpers.vardump;
     res.locals.mensajes = req.flash();
+    res.locals.usuario = {
+        ...req.user
+    } || null;
     next();
 });
 
 
 
-app.use('/', routes() );
+app.use('/', routes());
 
 app.listen(3000);
