@@ -45,6 +45,11 @@ const Usuarios = db.define('usuarios', {
     }
 });
 
+// metosos personalizados
+Usuarios.protorype.verificarPassword = function(password){
+    return bcrypt.compareSync(password, this.password);
+}
+
 Usuarios.hasMany(Proyectos);
 
 module.exports = Usuarios;
