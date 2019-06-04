@@ -50,8 +50,7 @@ app.use(expressValidator());
 // añadir la carpeta de las vistas
 app.set('views', path.join(__dirname, './views'));
 
-// Agregar flash messages
-app.use(flash());
+
 
 app.use(cookieParser());
 
@@ -64,6 +63,9 @@ app.use(session({
 
 app.use(passport.initialize());
 app.use(passport.session());
+
+// Agregar flash messages
+app.use(flash());
 
 //Pasar van dump a la aplicacion
 app.use((req,res, next) => {
