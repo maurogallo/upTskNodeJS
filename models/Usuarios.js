@@ -46,7 +46,7 @@ const Usuarios = db.define('usuarios', {
 });
 
 // metosos personalizados
-Usuarios.protorype.verificarPassword = function(password){
+Usuarios.prototype.verificarPassword = function(password){
     return bcrypt.compareSync(password, this.password);
 }
 

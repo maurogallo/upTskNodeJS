@@ -7,9 +7,9 @@ const { body } = require('express-validator/check');
 
 // impotar el controlador
 const proyectosController = require('../controllers/proyectosController');
-
 const tareasController =require('../controllers/tareasController');
 const usuariosController =require('../controllers/usuariosController');
+const authcontroller = require('../controllers/authController');
 
 module.exports = function(){
 // ruta para el home
@@ -49,6 +49,7 @@ router.post('/crear-cuenta',usuariosController.crearCuenta);
 
 // iniciar sesion
 router.get('/iniciar-sesion', usuariosController.formIniciarSesion);
+router.post('/iniciar-sesion', authcontroller.autenticarUsuario);
 
 return router;
 }
