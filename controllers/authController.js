@@ -13,7 +13,7 @@ exports.autenticarUsuario = passport.authenticate('local',{
 // Funcion para revisar si el usuairo esta logueado o no
 
 exports.usuarioAutenticado = (req, res, next) => {
-//si el usuario es tautenticado adelante
+//si el usuario es autenticado adelante
 
 if (req.isAuthenticated()){
     return next();
@@ -33,12 +33,12 @@ exports.cerrarSesion = (req, res) => {
 // genera un token si el usuario es valido
 exports.enviarToken = async (req, res) => {
     // verificar que el usuario exista
-    const {email} = req.body
-    const usuario = await  Usuarios.findOne({where:{ email }});
+    const { email } = req.body;
+    const usuario = await  Usuarios.findOne({where: { email: req.body.email }});
 
     // si no existe el usuario
     if(!usuario){
-        req.flash('error', 'Np existe esa cuenta')
+        req.flash('error', 'No existe esa cuenta')
         res.redirect('/reestablecer');
     }
 
@@ -52,11 +52,31 @@ exports.enviarToken = async (req, res) => {
     
     // url de reset
 
-    const resetUrl = `http://${req.headers.host}/reestablecer/${usuario.token}`;
+    const resetUrl =  `http://${req.headers.host}/reestablecer/${usuario.token}`;
+    res.redirect(resetUrl);
 
-    console.log(resetUrl);
+    //console.log(resetUrl);
 }
 
 exports.resetPassword = async (req, res) => {
-    res.json(req.params.token);
+
+    //res.json(req.params.token);
+   const usuario = await Usuarios.findOne({
+        where: {
+            token: req.params.token
+        }
+  });
+    console.log(usuario);
+
+
+    //sino encuentra el usuario
+    if(!usuario){
+        req.flash('error', 'no valido');
+        res.redirect('/reestablecer');
+   }
+
+   // formulario para generar el password
+   res.render('resetPassword',{
+       nombrePagina : 'Restablecer Contraseña'
+   })
 }
