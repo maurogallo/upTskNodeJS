@@ -11,7 +11,7 @@
   "author": "Mauricio Gallo",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "bcrypt-nodejs": "0.0.3",
     "concurrently": "^4.1.0",
     "connect-flash": "^0.1.1",
@@ -21,12 +21,13 @@
     "express-validator": "^5.3.1",
     "html-to-text": "^5.1.1",
     "juice": "^5.2.0",
+    "lodash": "^4.17.15",
     "mysql2": "^1.6.5",
     "nodemailer": "^6.2.1",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "pug": "^2.0.3",
-    "sequelize": "^5.15.1",
+    "sequelize": "^5.21.2",
     "shortid": "^2.2.14",
     "slug": "^1.1.0",
     "sweetalert2": "^8.9.0"
