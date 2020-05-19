@@ -1,0 +1,30 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Users\\OCTOBER\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'start' ]
+2 info using npm@3.10.10
+3 info using node@v10.16.0
+4 verbose run-script [ 'prestart', 'start', 'poststart' ]
+5 info lifecycle uptasknodejs@1.0.0~prestart: uptasknodejs@1.0.0
+6 silly lifecycle uptasknodejs@1.0.0~prestart: no script for prestart, continuing
+7 info lifecycle uptasknodejs@1.0.0~start: uptasknodejs@1.0.0
+8 verbose lifecycle uptasknodejs@1.0.0~start: unsafe-perm in lifecycle true
+9 verbose lifecycle uptasknodejs@1.0.0~start: PATH: C:\Users\OCTOBER\AppData\Roaming\npm\node_modules\npm\bin\node-gyp-bin;D:\Git\BootCamp\UpTaskNodeJS\node_modules\.bin;C:\Program Files (x86)\Microsoft SDKs\Azure\CLI2\wbin;D:\app\maurogallo\product\12.1.0\dbhome_1\bin;C:\Program Files\Microsoft MPI\Bin\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\dotnet\;c:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\wamp64\bin\php\php7.2.18;C:\composer;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_151\bin;c:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Gradle\gradle-6.3\bin;C:\Users\OCTOBER\AppData\Local\Programs\Python\Python37-32\Scripts\;C:\Users\OCTOBER\AppData\Local\Programs\Python\Python37-32\;C:\Users\OCTOBER\AppData\Local\Microsoft\WindowsApps;C:\Users\OCTOBER\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\OCTOBER\AppData\Roaming\npm;C:\Users\OCTOBER\AppData\Roaming\Composer\vendor\bin;C:\Users\OCTOBER\AppData\Local\GitHubDesktop\bin;d:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2019.1.3\bin;C:\Users\OCTOBER\AppData\Local\Microsoft\WindowsApps;C:\ProgramData\OCTOBER\atom\bin;C:\Users\OCTOBER\.dotnet\tools
+10 verbose lifecycle uptasknodejs@1.0.0~start: CWD: D:\Git\BootCamp\UpTaskNodeJS
+11 silly lifecycle uptasknodejs@1.0.0~start: Args: [ '/d /s /c', 'concurrently "npm run dev " "npm run watch " ' ]
+12 verbose stack Error: kill ENOSYS
+12 verbose stack     at process.kill (internal/process/per_thread.js:198:13)
+12 verbose stack     at process.listener (C:\Users\OCTOBER\AppData\Roaming\npm\node_modules\npm\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:86:15)
+12 verbose stack     at process.emit (events.js:203:15)
+13 verbose cwd D:\Git\BootCamp\UpTaskNodeJS
+14 error Windows_NT 10.0.18363
+15 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Users\\OCTOBER\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js" "start"
+16 error node v10.16.0
+17 error npm  v3.10.10
+18 error code ENOSYS
+19 error errno ENOSYS
+20 error syscall kill
+21 error kill ENOSYS
+22 error If you need help, you may report this error at:
+22 error     <https://github.com/npm/npm/issues>
+23 verbose exit [ 1, true ]
